@@ -14,7 +14,7 @@
   @apply flex flex-col items-end gap-3 fixed z-[99999998] top-0 right-0 w-fit;
   &:hover {
     .hoverBall {
-      @apply w-14 bg-background/100;
+      @apply w-14;
     }
     .buttons {
       @apply opacity-100 pointer-events-auto right-0;
@@ -29,9 +29,26 @@
 }
 
 .hoverBall {
-  @apply w-10 cursor-move bg-background/70 relative transition-all duration-300 ease-in-out rounded-l-full shadow-md overflow-hidden backdrop-blur-sm;
+  @apply w-10 cursor-move bg-background relative transition-all duration-300 ease-in-out rounded-l-full shadow-md backdrop-blur-sm overflow-visible;
   .logo {
-    @apply m-1.5 transition-all duration-300 ease-in-out size-7 block transform rounded-full pointer-events-none;
+    @apply m-1.5 transition-all duration-300 ease-in-out size-7 block transform rounded-l-full pointer-events-none;
+  }
+
+  .status {
+    @apply absolute bottom-1 left-6 rounded-full p-0.5 bg-background/50;
+    & > *:first-child {
+      @apply size-3.5 rounded-full;
+    }
+  }
+
+  .tooltip {
+    @apply hidden absolute top-2 right-16 w-fit whitespace-nowrap invert bg-background rounded-3xl px-2 py-1 pointer-events-none text-xs font-medium;
+  }
+
+  &:hover {
+    .tooltip {
+      @apply block;
+    }
   }
 }
 

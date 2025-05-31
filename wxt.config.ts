@@ -7,7 +7,13 @@ export default defineConfig({
   modules: ["@wxt-dev/module-react", "@wxt-dev/auto-icons"],
   imports: false,
   manifest: {
+    // name: "Wxter", // Override the name in manifest.json
     permissions: ["storage"],
+  },
+  dev: {
+    server: {
+      port: 4000,
+    },
   },
   vite: () => {
     return {
