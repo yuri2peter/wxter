@@ -4,9 +4,18 @@ import { useUpdater } from "../context";
 import styles from "./style.module.css";
 
 export function Buttons() {
-  const updater = useUpdater();
   return (
     <div className={styles.buttons}>
+      <div className={styles.placeholder} />
+      <ButtonGroup />
+    </div>
+  );
+}
+
+function ButtonGroup() {
+  const updater = useUpdater();
+  return (
+    <div className={styles.buttonGroup}>
       <Button
         tooltip="Settings"
         onClick={() => {
