@@ -1,3 +1,5 @@
+import { browser } from "wxt/browser";
+
 export const actions = {
   async example1(message: string) {
     return `example | ${message}`;
@@ -6,7 +8,7 @@ export const actions = {
     return a + b;
   },
   async openSettings() {
-    chrome.runtime.openOptionsPage();
+    browser.runtime.openOptionsPage();
   },
 };
 

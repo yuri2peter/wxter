@@ -20,7 +20,9 @@ bun ci
 bun dev
 ```
 
-Install the dev-extension in the `.output` folder to your browser, the HMR will work.
+Load the dev-extension in the `.output` folder to your browser, the HMR will work.
+
+See more details in [wxt.dev](https://wxt.dev).
 
 ## Manifest
 
@@ -31,10 +33,14 @@ Install the dev-extension in the `.output` folder to your browser, the HMR will 
 ## Build
 
 ```bash
-bun zip
+bun zip:all
 ```
 
-## Docs
+## Load the Built Extension
 
-- [WXT](https://wxt.dev)
-- [Chrome Extension](https://developer.chrome.com/docs/extensions/reference/)
+- [Chrome](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked)
+- [Edge](https://learn.microsoft.com/en-us/microsoft-edge/extensions/getting-started/extension-sideloading)
+- [Firefox](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
+- [Safari (partial supported)](https://wxt.dev/guide/essentials/publishing.html#safari)
+
+Load the unpacked extension from the `.output` folder.

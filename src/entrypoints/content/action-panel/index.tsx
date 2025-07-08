@@ -3,9 +3,9 @@ import { clamp } from "@/lib/number";
 import { useMemo, useRef } from "react";
 import Draggable from "react-draggable";
 import { hoverBallPositionStorage } from "../storage";
+import { Buttons } from "./buttons";
 import HoverBall from "./hover-ball";
 import styles from "./style.module.css";
-import { Buttons } from "./buttons";
 
 export default function ActionPanel() {
   const hoverBallPosition = useStorage(hoverBallPositionStorage);
